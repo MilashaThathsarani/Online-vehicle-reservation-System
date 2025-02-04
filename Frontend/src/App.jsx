@@ -1,8 +1,13 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import HomeLayout from './Layout/HomeLayout'
+
 
 function App() {
   return (
-    <div>Milasha Thathsarani</div>
+   <Routes>
+    <Route path='/' element= {<HomeLayout/>}/>
+   </Routes>
   )
 }
 
