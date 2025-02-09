@@ -14,8 +14,8 @@ function NavBar() {
         <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>Home</li>
         <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>About Us</li>
         <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>Services</li>
-        <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>Vehicle Models</li>
-        <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>Contact</li>
+        <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'> Vehicle Models</li>
+        <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>FAQ</li>
       </ul>
 
       <div className='bg-blue-200 py-1 px-3 cursor-pointer text-black gap-5 flex justify-center items-center rounded-xl h-12 ' ><CarTaxiFront /><h1>Book</h1></div>
