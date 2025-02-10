@@ -23,9 +23,9 @@ function Services() {
           { title: 'Well-Maintained Cars', desc: 'Our vehicles are regularly serviced and well-maintained.' },
           { title: 'Customer Satisfaction', desc: 'We prioritize customer satisfaction and high-quality service.' }
         ].map((reason, index) => (
-          <div key={index} className='bg-white p-4 rounded-lg shadow-md text-center'>
-            <h3 className='text-xl font-semibold mb-2'>{reason.title}</h3>
-            <p className='text-gray-600'>{reason.desc}</p>
+          <div key={index} className='bg-blue-900 p-4 rounded-lg shadow-md text-center'>
+            <h3 className='text-xl font-semibold mb-2 text-white'>{reason.title}</h3>
+            <p className='text-white'>{reason.desc}</p>
           </div>
         ))}
       </div>
