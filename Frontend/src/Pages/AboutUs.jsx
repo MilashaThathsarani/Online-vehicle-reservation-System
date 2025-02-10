@@ -1,24 +1,25 @@
-import React from 'react'
+import React from 'react';
+import  Car from '/public/images/view-3d-car.png'
 
 function AboutUs() {
   return (
-    <div className='justify-between items-center mt-8 min-h-[30vw] bg-white pl-6 border-b-2 border-gray-500'>
-
-        <div className='flex flex-col gap-13'>
-        <h1 className='text-4xl font-oswald font-bold ml-11 mt-10 text-blue-950'>ABOUT US</h1>
-         <h1 className='text-xl leading-8 ml-11 mb-55'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            <br/>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/> when an unknown printer took a galley of 
-            type and scrambled it to make a type specimen book. <br/>It has survived not only five centuries, but also the leap into electronic 
-            typesetting, remaining essentially unchanged.<br/>It was popularised in the 1960s with the release of Letraset sheets containing 
-            Lorem Ipsum passages, <br/>and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            <br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            <br/>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/> when an unknown printer took a galley of 
-            type and scrambled it to make a type specimen book. <br/>It has survived not only five centuries, but also the leap into electronic 
-            typesetting, remaining essentially unchanged.<br/>It was popularised in the 1960s with the release of Letraset sheets containing 
-            Lorem Ipsum passages, <br/>and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h1>
+    <div className='min-h-screen flex flex-col items-center justify-center bg-gray-100 py-10 px-6'>
+      <h2 className='text-3xl font-bold text-center mb-6'>About Us</h2>
+      <div className='max-w-4xl bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center'>
+        <img src = {Car} alt="Car" className='w-full md:w-1/2 rounded-lg mb-4 md:mb-0 md:mr-6'/>
+        <div className='text-gray-700'>
+          <p className='mb-4'>
+            Welcome to our company! We are dedicated to providing the best vehicle rental services.
+            Our mission is to offer top-quality cars at affordable prices with excellent customer service.
+          </p>
+          <p>
+            Whether you need a luxury vehicle for a special event or a budget-friendly car for daily use,
+            we have a variety of options to suit your needs. Your satisfaction is our priority!
+          </p>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

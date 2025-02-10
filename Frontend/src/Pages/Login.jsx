@@ -10,7 +10,7 @@ function Login() {
   };
 
   return (
-    <div className='min-h-screen flex items-center justify-center bg-gray-100'>
+    <div className='min-h-screen flex items-center justify-center bg-blue-950'>
       <div className='bg-white p-6 rounded-lg shadow-md w-96'>
         <h2 className='text-2xl font-bold text-center mb-4'>Login</h2>
         <form onSubmit={handleSubmit}>
