@@ -7,6 +7,7 @@ import AboutUs from '../Pages/AboutUs'
 import FAQ from '../Pages/FAQ'
 import Footer from '../Pages/Footer'
 import Login from '../Pages/Login'
+import Signup from '../Pages/Signup'
 
 function HomeLayout() {
   return (
@@ -17,6 +18,7 @@ function HomeLayout() {
         <Services/>
         <FAQ/>
         <Login/>
+        <Signup/>
         <Footer/>
         <Outlet/>
     </div>
