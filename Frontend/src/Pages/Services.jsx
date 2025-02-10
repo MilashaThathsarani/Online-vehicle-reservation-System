@@ -10,11 +10,11 @@ function Services() {
   ];
 
   return (
-    <div className='min-h-[35vw] bg-gray-100 py-10 px-6'>
+    <div className='min-h-[35vw] bg-white py-10 px-6  border-b-2 border-gray-500'>
       <h2 className='text-2xl font-bold text-center mb-6'>Available Vehicles</h2>
       <div className='grid grid-cols-4 gap-6'>
         {vehicles.map((vehicle, index) => (
-          <div key={index} className='bg-white shadow-md rounded-lg overflow-hidden p-4'>
+          <div key={index} className='bg-gray-100 shadow-md rounded-lg overflow-hidden p-4'>
             <img src={vehicle.image} alt={vehicle.name} className='w-full h-40 object-cover' />
             <h3 className='text-lg font-semibold mt-2'>{vehicle.name}</h3>
             <p className='text-gray-700'>Type: {vehicle.type}</p>

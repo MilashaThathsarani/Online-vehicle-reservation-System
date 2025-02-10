@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 import Services from '../Pages/Services'
 import AboutUs from '../Pages/AboutUs'
 import FAQ from '../Pages/FAQ'
+import Footer from '../Pages/Footer'
 
 function HomeLayout() {
   return (
@@ -14,6 +15,7 @@ function HomeLayout() {
         <AboutUs/>
         <Services/>
         <FAQ/>
+        <Footer/>
         <Outlet/>
     </div>
   )
