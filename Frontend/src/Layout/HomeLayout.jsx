@@ -8,6 +8,8 @@ import FAQ from '../Pages/FAQ'
 import Footer from '../Pages/Footer'
 import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
+import CarBooking from '../Pages/CarBooking'
+import VehicleModels from '../Pages/VehicleModels'
 
 function HomeLayout() {
   return (
@@ -16,9 +18,11 @@ function HomeLayout() {
         <Home/>
         <AboutUs/>
         <Services/>
+        <VehicleModels/>
         <FAQ/>
         <Login/>
         <Signup/>
+        <CarBooking/>
         <Footer/>
         <Outlet/>
     </div>

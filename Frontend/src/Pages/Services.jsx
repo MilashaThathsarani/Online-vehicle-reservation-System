@@ -1,25 +1,31 @@
 import React from 'react';
 
 function Services() {
-  const vehicles = [
-    { name: 'Audi', type: 'Luxury', seats: 5, status: 'Available', image: 'https://source.unsplash.com/400x300/?audi' },
-    { name: 'Toyota', type: 'Budget', seats: 5, status: 'Available', image: 'https://source.unsplash.com/400x300/?toyota' },
-    { name: 'BMW', type: 'Luxury', seats: 5, status: 'Rented', image: 'https://source.unsplash.com/400x300/?bmw' },
-    { name: 'Honda', type: 'Economy', seats: 5, status: 'Available', image: 'https://source.unsplash.com/400x300/?honda' },
-    
-  ];
-
   return (
-    <div className='min-h-[35vw] bg-white py-10 px-6  border-b-2 border-gray-500'>
-      <h2 className='text-2xl font-bold text-center mb-6'>Available Vehicles</h2>
-      <div className='grid grid-cols-4 gap-6'>
-        {vehicles.map((vehicle, index) => (
-          <div key={index} className='bg-gray-100 shadow-md rounded-lg overflow-hidden p-4'>
-            <img src={vehicle.image} alt={vehicle.name} className='w-full h-40 object-cover' />
-            <h3 className='text-lg font-semibold mt-2'>{vehicle.name}</h3>
-            <p className='text-gray-700'>Type: {vehicle.type}</p>
-            <p className='text-gray-700'>Seats: {vehicle.seats}</p>
-            <p className={`font-semibold ${vehicle.status === 'Available' ? 'text-green-600' : 'text-red-600'}`}>{vehicle.status}</p>
+    <div className='min-h-screen bg-gray-100 p-6'>
+      <h2 className='text-3xl font-bold text-center mb-6'>Our Services</h2>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+        {['Luxury Cars', 'Budget Cars', 'SUVs', 'Electric Cars'].map((service, index) => (
+          <div key={index} className='bg-white p-4 rounded-lg shadow-md text-center'>
+            <h3 className='text-xl font-semibold mb-2'>{service}</h3>
+            <p className='text-gray-600'>Experience the best car rental service with our {service.toLowerCase()}.</p>
+          </div>
+        ))}
+      </div>
+      
+      <h2 className='text-3xl font-bold text-center mt-12 mb-6'>Why Choose Us?</h2>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        {[
+          { title: 'Affordable Prices', desc: 'We offer competitive pricing with no hidden charges.' },
+          { title: 'Wide Selection', desc: 'Choose from a variety of vehicles to suit your needs.' },
+          { title: '24/7 Support', desc: 'Our customer support team is available round the clock.' },
+          { title: 'Easy Booking', desc: 'Simple and fast booking process with flexible options.' },
+          { title: 'Well-Maintained Cars', desc: 'Our vehicles are regularly serviced and well-maintained.' },
+          { title: 'Customer Satisfaction', desc: 'We prioritize customer satisfaction and high-quality service.' }
+        ].map((reason, index) => (
+          <div key={index} className='bg-white p-4 rounded-lg shadow-md text-center'>
+            <h3 className='text-xl font-semibold mb-2'>{reason.title}</h3>
+            <p className='text-gray-600'>{reason.desc}</p>
           </div>
         ))}
       </div>
