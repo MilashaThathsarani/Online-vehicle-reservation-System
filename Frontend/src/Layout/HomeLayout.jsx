@@ -10,6 +10,7 @@ import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import CarBooking from '../Pages/CarBooking'
 import VehicleModels from '../Pages/VehicleModels'
+import AdminPanel from '../Pages/AdminPanel'
 
 function HomeLayout() {
   return (
@@ -23,6 +24,7 @@ function HomeLayout() {
         <Login/>
         <Signup/>
         <CarBooking/>
+        <AdminPanel/>
         <Footer/>
         <Outlet/>
     </div>
