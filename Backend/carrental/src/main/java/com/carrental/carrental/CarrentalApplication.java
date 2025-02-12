@@ -1,13 +1,13 @@
-package com.example.SpringBootOne;
+package com.carrental.carrental;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootOneApplication {
+public class CarrentalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootOneApplication.class, args);
+		SpringApplication.run(CarrentalApplication.class, args);
 	}
 
 }

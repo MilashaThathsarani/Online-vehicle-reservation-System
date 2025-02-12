@@ -3,7 +3,7 @@ import  Car from '/public/images/view-3d-car.png'
 
 function AboutUs() {
   return (
-    <div className='min-h-screen flex flex-col items-center justify-center bg-gray-100 py-10 px-6'>
+    <div className='min-h-screen flex flex-col items-center justify-center bg-white py-10 px-6'>
       <h2 className='text-3xl font-bold text-center mb-6'>About Us</h2>
       <div className='max-w-4xl bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center'>
         <img src = {Car} alt="Car" className='w-full md:w-1/2 rounded-lg mb-4 md:mb-0 md:mr-6'/>

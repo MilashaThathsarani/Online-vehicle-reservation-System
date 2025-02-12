@@ -1,10 +1,10 @@
-package com.example.SpringBootOne;
+package com.carrental.carrental;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootOneApplicationTests {
+class CarrentalApplicationTests {
 
 	@Test
 	void contextLoads() {
