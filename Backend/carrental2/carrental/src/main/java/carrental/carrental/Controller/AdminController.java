@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
 import carrental.carrental.Model.Admin;
 import carrental.carrental.Repository.AdminRepository;
 import carrental.carrental.Service.AdminService;
@@ -29,7 +28,7 @@ public class AdminController {
     public Admin createAdmin(@RequestBody Admin admin) {
        return adminService.createAdmin(admin);
    }
-
+   
    @GetMapping("/getadminbyid/{adminId}")
    public Admin getAdminId(@PathVariable String adminId) {
         return adminService.getAdminById(adminId);
