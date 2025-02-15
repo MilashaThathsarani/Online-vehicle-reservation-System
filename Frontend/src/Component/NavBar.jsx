@@ -18,7 +18,7 @@ function NavBar() {
         <li className='cursor-pointer hover:text-blue-700 transition delay-75 p-3'>FAQ</li>
       </ul>
 
-      <div className='bg-blue-200 py-1 px-3 cursor-pointer text-black gap-5 flex justify-center items-center rounded-xl h-12 ' ><CarTaxiFront /><h1>Book</h1></div>
+      <div className='bg-blue-900 py-1 px-3 cursor-pointer text-white gap-5 flex justify-center items-center rounded-xl h-12 ' ><CarTaxiFront /><h1>Book</h1></div>
 
     </div>
   )

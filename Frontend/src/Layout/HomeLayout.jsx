@@ -11,6 +11,9 @@ import Signup from '../Pages/Signup'
 import CarBooking from '../Pages/CarBooking'
 import VehicleModels from '../Pages/VehicleModels'
 import AdminPanel from '../Pages/AdminPanel'
+import Dashboard from '../Pages/DashBoard'
+import UsersManage from '../Pages/UsersManage'
+import CarsManage from '../Pages/CarsManage'
 
 function HomeLayout() {
   return (
@@ -25,6 +28,9 @@ function HomeLayout() {
         <Signup/>
         <CarBooking/>
         <AdminPanel/>
+        <Dashboard/>
+        <UsersManage/>
+        <CarsManage/>
         <Footer/>
         <Outlet/>
     </div>
