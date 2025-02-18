@@ -25,6 +25,18 @@ public class CutomerController {
     @Autowired
     private CustomerService customerService;
 
+    @PostMapping
+    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+        Customer createdCustomer = customerService.create(customer);
+        return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Customer> updateCustomer(@PathVariable String id, @RequestBody Customer customer) {
+        Customer updatedCustomer = customerService.update(id, customer);
+        return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
+    }
+
     @GetMapping
     public ResponseEntity<List<Customer>> getAllCustomers() {
         List<Customer> customers = customerService.findAll();
@@ -36,18 +48,6 @@ public class CutomerController {
         Optional<Customer> customer = customerService.findById(id);
         return customer.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
-        Customer createdCustomer = customerService.create(customer);
-        return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Customer> updateCustomer(@PathVariable String id, @RequestBody Customer customer) {
-        Customer updatedCustomer = customerService.update(id, customer);
-        return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

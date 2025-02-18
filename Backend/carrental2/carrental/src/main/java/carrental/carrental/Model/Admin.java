@@ -14,7 +14,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Document(collection = "admin")
 public class Admin {
-    
     @Id
     private String adminId;
     private String userName;

@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Booking {
-
     @Id
     private String bookingId;
     private String pickupLocation;
