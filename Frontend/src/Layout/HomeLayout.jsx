@@ -24,13 +24,6 @@ function HomeLayout() {
         <Services/>
         <VehicleModels/>
         <FAQ/>
-        <Login/>
-        <Signup/>
-        <CarBooking/>
-        <AdminPanel/>
-        <Dashboard/>
-        <UsersManage/>
-        <CarsManage/>
         <Footer/>
         <Outlet/>
     </div>
