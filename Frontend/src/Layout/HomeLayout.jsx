@@ -14,6 +14,7 @@ import AdminPanel from '../Pages/AdminPanel'
 import Dashboard from '../Pages/DashBoard'
 import UsersManage from '../Pages/UsersManage'
 import CarsManage from '../Pages/CarsManage'
+import Vehicles from '../Pages/Vehicles'
 
 function HomeLayout() {
   return (
@@ -22,7 +23,7 @@ function HomeLayout() {
         <Home/>
         <AboutUs/>
         <Services/>
-        <VehicleModels/>
+        <Vehicles/>
         <FAQ/>
         <Footer/>
         <Outlet/>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaTrash, FaSearch, FaTimes } from 'react-icons/fa';
 
 function Customer() {
   const [customers, setCustomers] = useState([
@@ -42,62 +43,82 @@ function Customer() {
   };
 
   return (
-    <div className="min-h-[91vh] p-6">
-      <h2 className="text-2xl font-bold mb-4">Customer List</h2>
+    <div className="min-h-[91vh] p-6 bg-gray-50">
+      <h2 className="text-2xl font-bold mb-6">Customer List</h2>
 
       {/* Search Bar */}
-      <div className="mb-4">
-        <input
-          type="text"
-          placeholder="Search by Name, Email, Phone, City, or NIC..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+      <div className="mb-6 relative">
+        <div className="flex items-center">
+          <input
+            type="text"
+            placeholder="Search by Name, Email, Phone, City, or NIC..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full p-2 pl-10 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <FaSearch className="absolute left-3 text-gray-400" />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 text-gray-400 hover:text-gray-600"
+            >
+              <FaTimes />
+            </button>
+          )}
+        </div>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full bg-white rounded-lg shadow-md">
+      {/* Table */}
+      <div className="overflow-x-auto shadow-md rounded-lg bg-white">
+        <table className="w-full table-auto border-collapse">
           <thead>
             <tr className="bg-gray-700 text-white">
-              <th className="p-2">Customer ID</th>
-              <th className="p-2">Customer Name</th>
-              <th className="p-2">Address</th>
-              <th className="p-2">Email</th>
-              <th className="p-2">Phone Number</th>
-              <th className="p-2">Current City</th>
-              <th className="p-2">NIC No</th>
-              <th className="p-2">Customer Photo</th>
-              <th className="p-2">Actions</th>
+              <th className="px-4 py-3 text-left">Customer ID</th>
+              <th className="px-4 py-3 text-left">Customer Name</th>
+              <th className="px-4 py-3 text-left">Address</th>
+              <th className="px-4 py-3 text-left">Email</th>
+              <th className="px-4 py-3 text-left">Phone Number</th>
+              <th className="px-4 py-3 text-left">Current City</th>
+              <th className="px-4 py-3 text-left">NIC No</th>
+              <th className="px-4 py-3 text-left">Customer Photo</th>
+              <th className="px-4 py-3 text-left">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {filteredCustomers.map((customer) => (
-              <tr key={customer.id} className="border-b hover:bg-gray-100">
-                <td className="p-2 text-center">{customer.id}</td>
-                <td className="p-2 text-center">{customer.name}</td>
-                <td className="p-2 text-center">{customer.address}</td>
-                <td className="p-2 text-center">{customer.email}</td>
-                <td className="p-2 text-center">{customer.phone}</td>
-                <td className="p-2 text-center">{customer.city}</td>
-                <td className="p-2 text-center">{customer.nic}</td>
-                <td className="p-2 text-center">
-                  <img
-                    src={customer.photo}
-                    alt="User Photo"
-                    className="w-10 h-10 object-cover rounded-full mx-auto"
-                  />
-                </td>
-                <td className="p-2 text-center">
-                  <button
-                    className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-700"
-                    onClick={() => handleDelete(customer.id)}
-                  >
-                    Delete
-                  </button>
+            {filteredCustomers.length > 0 ? (
+              filteredCustomers.map((customer) => (
+                <tr key={customer.id} className="border-b hover:bg-gray-50 transition-colors">
+                  <td className="px-4 py-3">{customer.id}</td>
+                  <td className="px-4 py-3">{customer.name}</td>
+                  <td className="px-4 py-3">{customer.address}</td>
+                  <td className="px-4 py-3">{customer.email}</td>
+                  <td className="px-4 py-3">{customer.phone}</td>
+                  <td className="px-4 py-3">{customer.city}</td>
+                  <td className="px-4 py-3">{customer.nic}</td>
+                  <td className="px-4 py-3">
+                    <img
+                      src={customer.photo}
+                      alt="Customer Photo"
+                      className="w-10 h-10 object-cover rounded-full mx-auto"
+                    />
+                  </td>
+                  <td className="px-4 py-3">
+                    <button
+                      onClick={() => handleDelete(customer.id)}
+                      className="text-red-500 hover:text-red-700"
+                    >
+                      <FaTrash />
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="9" className="text-center py-6 text-gray-500">
+                  No customers found.
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
