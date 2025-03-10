@@ -1,5 +1,16 @@
 package carrental.carrental.Repository;
 
-public class DriverRepository {
-    
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import carrental.carrental.Model.Driver;
+
+@Repository
+public interface DriverRepository extends MongoRepository<Driver, String> {
+
+    Optional<Driver> findByUserName(String userName);
+    List<Driver> findByCatID(String catID);
 }

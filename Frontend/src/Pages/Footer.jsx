@@ -1,76 +1,48 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; // Social media icons
+import React from 'react'
+import Logo from '../assets/LogoFooter.svg'
+import Payment from '../assets/pay.svg'
+import { LocateIcon, Mail, Phone } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className='bg-blue-950 text-white py-10 mt-10'>
-      <div className='max-w-6xl mx-auto px-6'>
-        {/* Grid layout for footer content */}
-        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8'>
-          {/* Contact Information */}
-          <div className='mb-6'>
-            <h3 className='text-xl font-semibold mb-4'>Contact Us</h3>
-            <p className='mt-2'>Email: support@carrental.com</p>
-            <p>Phone: +1 234 567 890</p>
-            <p>Address: 123 Car Rental Street, City, Country</p>
-          </div>
-
-          {/* Quick Links */}
-          <div className='mb-6'>
-            <h3 className='text-xl font-semibold mb-4'>Quick Links</h3>
-            <ul className='space-y-2'>
-              <li><a href='/about' className='hover:text-blue-400 transition-colors'>About Us</a></li>
-              <li><a href='/services' className='hover:text-blue-400 transition-colors'>Services</a></li>
-              <li><a href='/faq' className='hover:text-blue-400 transition-colors'>Vehicle Models</a></li>
-              <li><a href='/terms' className='hover:text-blue-400 transition-colors'>FAQ</a></li>
-            </ul>
-          </div>
-
-          {/* Newsletter Subscription */}
-          <div className='mb-6'>
-            <h3 className='text-xl font-semibold mb-4'>Subscribe to Our Newsletter</h3>
-            <form className='flex flex-col space-y-3'>
-              <input
-                type='email'
-                placeholder='Enter your email'
-                className='p-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400'
-              />
-              <button
-                type='submit'
-                className='bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors'
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-
-          {/* Social Media Links */}
-          <div className='mb-6'>
-            <h3 className='text-xl font-semibold mb-4'>Follow Us</h3>
-            <div className='flex space-x-4'>
-              <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='hover:text-blue-400 transition-colors'>
-                <FaFacebook className='w-6 h-6' />
-              </a>
-              <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='hover:text-blue-400 transition-colors'>
-                <FaTwitter className='w-6 h-6' />
-              </a>
-              <a href='https://instagram.com' target='_blank' rel='noopener noreferrer' className='hover:text-blue-400 transition-colors'>
-                <FaInstagram className='w-6 h-6' />
-              </a>
-              <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='hover:text-blue-400 transition-colors'>
-                <FaLinkedin className='w-6 h-6' />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright Section */}
-        <div className='border-t border-gray-700 pt-6 mt-8 text-center'>
-          <p>&copy; {new Date().getFullYear()} Car Rental. All Rights Reserved.</p>
-        </div>
+    <div className='min-h-screen bg-blue-600 font-simplon px-5'>
+      <div className='flex flex-col border-b-2 '>
+        <img src={Logo} alt="Logo" />
       </div>
-    </footer>
-  );
+      <div className='flex flex-row gap-10 items-center justify-between text-xl p-10 text-white border-b-2 '>
+        <div className='w-[20vw]  text-balance '>
+            <p>MegaCity offers reliable, affordable, and safe transportation solutions tailored to your needs.<br />Whether it’s a quick ride across town or a long-distance journey.</p>
+        </div>
+      <div>
+        <ul>
+            <li><Link>Home</Link></li>
+            <li><Link to="/ride">Ride</Link></li>
+            <li>About Us</li>
+            <li>Safty</li>
+        </ul>
+      </div>
+      <div className='mb-10'>
+        <ul>
+            <li><Link to='/blog'>Blog</Link></li>
+            <li><Link to='/'>Contact Us</Link></li>
+           <Link to='driver-register'><li>Join as a Driver</li></Link> 
+        </ul>
+      </div>
+      <div className='flex flex-col justify-center items-center'>
+        <ul className='flex flex-col gap-5'>
+            <li className='flex gap-2'><Phone/>0743631212</li>
+            <li className='flex gap-2'><Mail/>info@megacab.com</li>
+            <li className='flex gap-2'><LocateIcon/>No23 Colombo 2,Srilanka</li>
+        </ul>
+      </div>
+      </div>
+    <div className='flex flex-row font-simplon justify-between items-center  gap-5 p-10 text-white'>
+      <p >© MegaCity. All rights reserved.</p>
+      <img src={Payment} alt="" className='w-[15vw] px-5' />
+    </div>
+    </div>
+  )
 }
 
-export default Footer;
+export default Footer
