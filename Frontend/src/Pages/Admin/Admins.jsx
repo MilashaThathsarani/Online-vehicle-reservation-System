@@ -72,7 +72,7 @@ function Admins() {
 
   return (
     <div className="min-h-[91vh] bg-white p-6">
-      <h2 className="text-2xl font-bold mb-4">Admin List</h2>
+      <h2 className="text-xl font-bold mb-4">Admin</h2>
 
       {/* Add Admin Button */}
       <button
@@ -86,7 +86,7 @@ function Admins() {
       <div className="overflow-x-auto">
         <table className="w-full bg-white rounded-lg shadow-md">
           <thead>
-            <tr className="bg-gray-700 text-white">
+            <tr className="bg-blue-950 text-white">
               <th className="p-2">Admin ID</th>
               <th className="p-2">Username</th>
               <th className="p-2">Password</th>

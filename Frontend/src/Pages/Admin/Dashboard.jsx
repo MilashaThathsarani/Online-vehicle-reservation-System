@@ -233,16 +233,16 @@ function Dashboard() {
     <div className="flex flex-col gap-10 bg-gradient-to-r from-amber-50 to-red-50 min-h-[91vh] p-6">
       <Toaster />
       <div className="flex justify-center gap-10">
-        <div className="w-[20vw] h-[6vw] flex justify-center items-center border bg-white hover:bg-black hover:text-yellow-50 rounded-md transition shadow-md">
+        <div className="w-[20vw] h-[6vw] flex justify-center items-center border bg-white hover:bg-blue-950 hover:text-yellow-50 rounded-md transition shadow-md">
           <div className="justify-center flex flex-col items-center gap-5">
             <h1 className="font-semibold">Booking Trips</h1>
-            <h1 className="text-2xl font-bold text-purple-400">120</h1>
+            <h1 className="text-2xl font-bold text-yellow-500">120</h1>
           </div>
         </div>
-        <div className="w-[20vw] h-[6vw] flex justify-center items-center border bg-white hover:bg-black hover:text-yellow-50 rounded-md transition shadow-md">
+        <div className="w-[20vw] h-[6vw] flex justify-center items-center border bg-white hover:bg-blue-950 hover:text-yellow-50 rounded-md transition shadow-md">
           <div className="justify-center flex flex-col items-center gap-5">
             <h1 className="font-semibold">Total Revenue</h1>
-            <h1 className="text-2xl font-bold text-green-400">$25,000</h1>
+            <h1 className="text-2xl font-bold text-yellow-500">$25,000</h1>
           </div>
         </div>
       </div>

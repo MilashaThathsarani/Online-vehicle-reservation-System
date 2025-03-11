@@ -21,12 +21,12 @@ function AdminHome() {
   return (
     <div className="w-full min-h-screen bg-white font-simplon flex">
       {/* Left Sidebar */}
-      <div className="w-[250px] h-auto bg-[#344955] rounded-l-[16px] flex flex-col items-center py-6 text-white shadow-lg">
+      <div className="w-[250px] h-auto bg-blue-950 flex flex-col items-center py-6 text-white shadow-lg">
         <h1 className="text-[26px] mb-8 text-center">Admin Dashboard</h1>
         <div className="w-full flex flex-col items-center gap-12">
           <Link
             to="/admin/dashboard"
-            className={`sidebar-link ${selected === 'dashboard' ? 'bg-[#2C3E50] py-4 px-6' : 'hover:bg-[#2C3E50]  py-4 px-6 rounded-md'}`}
+            className={`sidebar-link ${selected === 'dashboard' ? 'bg-blue-950 py-4 px-6' : '  py-4 px-6 rounded-md'}`}
             onClick={() => handleSelect('dashboard', 'Dashboard')}
           >
             <div className="flex items-center gap-6">
@@ -36,7 +36,7 @@ function AdminHome() {
           </Link>
           <Link
             to="/admin/bookings"
-            className={`sidebar-link ${selected === 'orders' ? 'bg-[#2C3E50] py-4 px-6' : 'hover:bg-[#2C3E50] py-4 px-6 rounded-md'}`}
+            className={`sidebar-link ${selected === 'orders' ? 'bg-blue-950 py-4 px-6' : ' py-4 px-6 rounded-md'}`}
             onClick={() => handleSelect('orders', 'Bookings')}
           >
             <div className="flex items-center gap-6">
@@ -46,7 +46,7 @@ function AdminHome() {
           </Link>
           <Link
             to="/admin/customers"
-            className={`sidebar-link ${selected === 'customers' ? 'bg-[#2C3E50] py-4 px-6' : 'hover:bg-[#2C3E50] py-4 px-6 rounded-md'}`}
+            className={`sidebar-link ${selected === 'customers' ? 'bg-blue-950 py-4 px-6' : ' py-4 px-6 rounded-md'}`}
             onClick={() => handleSelect('customers', 'Customers')}
           >
             <div className="flex items-center gap-6">
@@ -56,7 +56,7 @@ function AdminHome() {
           </Link>
           <Link
             to="/admin/driver"
-            className={`sidebar-link ${selected === 'driver' ? 'bg-[#2C3E50] py-4 px-6' : 'hover:bg-[#2C3E50] py-4 px-6 rounded-md'}`}
+            className={`sidebar-link ${selected === 'driver' ? 'bg-blue-950  py-4 px-6' : ' py-4 px-6 rounded-md'}`}
             onClick={() => handleSelect('driver', 'Drivers')}
           >
             <div className="flex items-center gap-6">
@@ -66,7 +66,7 @@ function AdminHome() {
           </Link>
           <Link
             to="/admin/admins"
-            className={`sidebar-link ${selected === 'admins' ? 'bg-[#2C3E50] py-4 px-6' : 'hover:bg-[#2C3E50] py-4 px-6 rounded-md'}`}
+            className={`sidebar-link ${selected === 'admins' ? 'bg-blue-950  py-4 px-6' : ' py-4 px-6 rounded-md'}`}
             onClick={() => handleSelect('admins', 'Admins')}
           >
             <div className="flex items-center gap-6">
@@ -77,7 +77,7 @@ function AdminHome() {
 
           <Link
             to="/admin/category"
-            className={`sidebar-link ${selected === 'category' ? 'bg-[#2C3E50] py-4 px-6' : 'hover:bg-[#2C3E50] py-4 px-6 rounded-md'}`}
+            className={`sidebar-link ${selected === 'category' ? 'bg-blue-950  py-4 px-6' : ' py-4 px-6 rounded-md'}`}
             onClick={() => handleSelect('category', 'Category')}
           >
             <div className="flex items-center gap-6">
@@ -96,11 +96,11 @@ function AdminHome() {
       {/* Main Content Area */}
       <div className="w-full  flex flex-col">
         {/* Top Bar */}
-        <div className="w-full h-[70px] bg-[#344955] flex items-center justify-between px-8 text-white shadow-lg">
+        <div className="w-full h-[70px] bg-blue-950  flex items-center justify-between px-8 text-white shadow-lg">
           <h1 className="text-white text-[20px]">{pageTitle}</h1>
           <div className="flex items-center gap-4">
             <span className="text-white text-sm">Admin</span>
-            <div className="w-[40px] h-[40px] bg-[#2C3E50] rounded-full flex items-center justify-center text-white">
+            <div className="w-[40px] h-[40px] bg-blue-950  rounded-full flex items-center justify-center text-white">
               {/* Placeholder for Admin Profile Image */}
               <span>A</span>
             </div>

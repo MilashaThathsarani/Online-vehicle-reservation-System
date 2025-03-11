@@ -43,7 +43,7 @@ function Customer() {
 
   return (
     <div className="min-h-[91vh] p-6">
-      <h2 className="text-2xl font-bold mb-4">Customer List</h2>
+      <h2 className="text-xl font-bold mb-4">Customers</h2>
 
       {/* Search Bar */}
       <div className="mb-4">
@@ -59,7 +59,7 @@ function Customer() {
       <div className="overflow-x-auto">
         <table className="w-full bg-white rounded-lg shadow-md">
           <thead>
-            <tr className="bg-gray-700 text-white">
+            <tr className="bg-blue-950 text-white">
               <th className="p-2">Customer Name</th>
               <th className="p-2">Email</th>
               <th className="p-2">Phone Number</th>

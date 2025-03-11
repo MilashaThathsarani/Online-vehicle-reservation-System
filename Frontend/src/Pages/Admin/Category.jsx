@@ -64,19 +64,19 @@ function Category() {
 
   return (
     <div className="min-h-[91vh] p-4">
-      <h1 className="text-2xl font-bold mb-4">Vehicle Categories</h1>
+      <h1 className="text-xl font-bold mb-4">Vehicle Categories</h1>
 
-      <div className="overflow-x-auto bg-white p-4 shadow-md rounded-md">
+      <div className="overflow-x-auto p-4 shadow-md rounded-md">
         <table className="w-full border-collapse border border-gray-300">
           <thead className="bg-gray-200">
             <tr>
-              <th className="border border-gray-300 px-4 py-2 text-left">#</th>
-              <th className="border border-gray-300 px-4 py-2 text-left">Car Type</th>
-              <th className="border border-gray-300 px-4 py-2 text-left">Model</th>
-              <th className="border border-gray-300 px-4 py-2 text-left">Seats</th>
-              <th className="border border-gray-300 px-4 py-2 text-left">Luggage</th>
-              <th className="border border-gray-300 px-4 py-2 text-left">Price/Km</th>
-              <th className="border border-gray-300 px-4 py-2 text-left">Actions</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">#</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">Car Type</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">Model</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">Seats</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">Luggage</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">Price/Km</th>
+              <th className="border border-gray-300 bg-blue-950  text-white px-4 py-2 text-left">Actions</th>
             </tr>
           </thead>
           <tbody>

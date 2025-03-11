@@ -1,89 +1,45 @@
-import React, { useState, useRef, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
-import { gsap } from "gsap";
+import React from 'react';
 
-function Faq() {
-  const [openIndex, setOpenIndex] = useState(null);
-  const faqRefs = useRef([]);
-
-  useEffect(() => {
-    gsap.fromTo(
-      faqRefs.current,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: "power3.out",
-      }
-    );
-  }, []);
-
+function FAQ() {
   const faqs = [
-    {
-      question: "What services does Mega City Cabservice offer?",
-      answer:
-        "We provide city-wide taxi services, airport transfers, and outstation travel options at affordable rates.",
-    },
-    {
-      question: "How can I book a cab?",
-      answer:
-        "You can book a cab through our website, mobile app, or by calling our hotline.",
-    },
-    {
-      question: "Are your drivers licensed and experienced?",
-      answer:
-        "Yes, all our drivers are licensed and undergo thorough background checks and training.",
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer:
-        "We accept cash, credit/debit cards, and online payments through popular platforms.",
-    },
-    {
-      question: "Do you offer 24/7 service?",
-      answer: "Yes, our services are available 24/7 for your convenience.",
-    },
+    { question: 'What types of vehicles are available?', answer: 'We offer luxury, budget, and economy vehicles for rent.' },
+    { question: 'How do I rent a vehicle?', answer: 'You can book a vehicle through our website by selecting your preferred car and rental dates.' },
+    { question: 'Are there any additional charges?', answer: 'Additional charges may apply for insurance, fuel, and late returns.' },
+    { question: 'Can I cancel my booking?', answer: 'Yes, you can cancel your booking up to 24 hours before the pickup time without a cancellation fee.' },
+    { question: 'What is the minimum rental age?', answer: 'The minimum rental age is 21 years old.' },
+    { question: 'Do you offer long-term rentals?', answer: 'Yes, we offer discounts for long-term rentals. Contact us for more details.' },
+    { question: 'Is insurance included?', answer: 'Basic insurance is included, but you can opt for additional coverage.' },
+    { question: 'Can I modify my booking?', answer: 'Yes, you can modify your booking up to 24 hours before the pickup time.' },
+    { question: 'What payment methods do you accept?', answer: 'We accept credit cards, debit cards, and online payment methods.' },
+    { question: 'Do you provide roadside assistance?', answer: 'Yes, we provide 24/7 roadside assistance for all rentals.' }
   ];
 
-  const toggleFaq = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <div className="bg-white min-h-screen font-walsheim flex flex-col justify-center items-center">
-      <h2 className="text-4xl font-bold text-center text-blue-600 mb-10">
-        Frequently Asked Questions
-      </h2>
-      <div className="max-w-4xl w-full space-y-6">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            ref={(el) => (faqRefs.current[index] = el)}
-            className="faq-item bg-blue-600 shadow-lg rounded-lg p-6 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => toggleFaq(index)}
-            >
-              <h3 className="text-lg font-semibold text-white">
-                {faq.question}
-              </h3>
-              <ChevronDown
-                className={`w-6 h-6 text-slate-200 transition-transform duration-300 ${
-                  openIndex === index ? "transform rotate-180" : ""
-                }`}
-              />
+    <div className='min-h-screen bg-white py-10 px-6'>
+      <h2 className='text-2xl font-bold text-center mb-6'>Frequently Asked Questions</h2>
+      <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8'>
+        {/* Left Column - First 5 FAQs */}
+        <div className='space-y-4'>
+          {faqs.slice(0, 5).map((faq, index) => (
+            <div key={index} className='p-4 bg-white shadow-md rounded-lg'>
+              <h3 className='text-lg font-semibold'>{faq.question}</h3>
+              <p className='text-gray-700 mt-2'>{faq.answer}</p>
             </div>
-            {openIndex === index && (
-              <p className="text-slate-400 mt-4">{faq.answer}</p>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Right Column - Next 5 FAQs */}
+        <div className='space-y-4'>
+          {faqs.slice(5).map((faq, index) => (
+            <div key={index} className='p-4 bg-white shadow-md rounded-lg'>
+              <h3 className='text-lg font-semibold'>{faq.question}</h3>
+              <p className='text-gray-700 mt-2'>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
-export default Faq;
+export default FAQ;

@@ -82,6 +82,7 @@ function DriversTable() {
 
   return (
     <div className="p-6 bg-white">
+      <h2 className="text-xl font-bold mb-4">Drivers</h2>
       {/* Search Input */}
       <div className="mb-6 flex items-center space-x-2">
         <input
@@ -96,7 +97,7 @@ function DriversTable() {
       {/* Drivers Table */}
       <table className="w-full border-collapse">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-blue-950 text-white">
             <th className="p-2 border">Profile</th>
             <th className="p-2 border">Name</th>
             <th className="p-2 border">Email</th>

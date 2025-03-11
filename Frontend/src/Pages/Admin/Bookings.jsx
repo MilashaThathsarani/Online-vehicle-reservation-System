@@ -36,7 +36,7 @@ function Bookings() {
 
   return (
     <div className="min-h-[91vh] p-4">
-      <h2 className="text-2xl font-semibold mb-4">Bookings</h2>
+      <h2 className="text-xl font-semibold mb-4">Bookings</h2>
 
       {/* Search Bar */}
       <div className="mb-4">
@@ -53,12 +53,12 @@ function Bookings() {
         <table className="w-full table-auto border-collapse">
           <thead>
             <tr>
-              <th className="border px-4 py-2 text-left bg-gray-700 text-white">Customer Email</th>
-              <th className="border px-4 py-2 text-left bg-gray-700 text-white">Date</th>
-              <th className="border px-4 py-2 text-left bg-gray-700 text-white">Time</th>
-              <th className="border px-4 py-2 text-left bg-gray-700 text-white">Total Price</th>
-              <th className="border px-4 py-2 text-left bg-gray-700 text-white">Status</th>
-              <th className="border px-4 py-2 text-left bg-gray-700 text-white">Actions</th>
+              <th className="border px-4 py-2 text-left bg-blue-950  text-white">Customer Email</th>
+              <th className="border px-4 py-2 text-left bg-blue-950  text-white">Date</th>
+              <th className="border px-4 py-2 text-left bg-blue-950  text-white">Time</th>
+              <th className="border px-4 py-2 text-left bg-blue-950  text-white">Total Price</th>
+              <th className="border px-4 py-2 text-left bg-blue-950  text-white">Status</th>
+              <th className="border px-4 py-2 text-left bg-blue-950  text-white">Actions</th>
             </tr>
           </thead>
           <tbody>
