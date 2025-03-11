@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { MoveRight } from 'lucide-react';
 import { gsap } from 'gsap';
-import NewImage from '../assets/Images/new-image.jpg'; // Replace with your new image path
+import NewImage from '/public/images/newphoto.jpg'; // Replace with your new image path
 
 const Hero = () => {
   const heroRef = useRef(null);
