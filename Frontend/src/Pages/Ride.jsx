@@ -115,7 +115,7 @@ function Ride() {
 
         <button 
           onClick={resetFilters}
-          className="px-4 py-2 bg-yellow-400 rounded-md shadow-md hover:bg-yellow-500 transition"
+          className="px-4 py-2 bg-blue-900 rounded-md shadow-md hover:bg-blue-800 transition text-white"
         >
           Reset Filters
         </button>

@@ -16,12 +16,12 @@ function FAQ() {
 
   return (
     <div className='min-h-screen bg-white py-10 px-6'>
-      <h2 className='text-2xl font-bold text-center mb-6'>Frequently Asked Questions</h2>
+      <h2 className='text-2xl font-bold text-center mt-10'>Frequently Asked Questions</h2>
       <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8'>
         {/* Left Column - First 5 FAQs */}
         <div className='space-y-4'>
           {faqs.slice(0, 5).map((faq, index) => (
-            <div key={index} className='p-4 bg-white shadow-md rounded-lg'>
+            <div key={index} className='p-4 bg-white shadow-md rounded-lg mt-10'>
               <h3 className='text-lg font-semibold'>{faq.question}</h3>
               <p className='text-gray-700 mt-2'>{faq.answer}</p>
             </div>
@@ -31,7 +31,7 @@ function FAQ() {
         {/* Right Column - Next 5 FAQs */}
         <div className='space-y-4'>
           {faqs.slice(5).map((faq, index) => (
-            <div key={index} className='p-4 bg-white shadow-md rounded-lg'>
+            <div key={index} className='p-4 bg-white shadow-md rounded-lg mt-10'>
               <h3 className='text-lg font-semibold'>{faq.question}</h3>
               <p className='text-gray-700 mt-2'>{faq.answer}</p>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import HomeFooterImg from '/images/Frame 29.png';
+import HomeFooterImg from '/public/images/homefooterimg.png';
 
-function Hero() {
+function Home() {
   return (
     <div 
       className='flex justify-between items-center mt-8 h-[43vw] bg-no-repeat pl-6 border-b-2 border-white relative ' 
@@ -13,7 +13,7 @@ function Hero() {
       }}
     >
       {/* Content Section */}
-      <div className='flex flex-col gap-12 bg-white bg-opacity-70 p-6 rounded-lg z-10'>
+      <div className='flex flex-col bg-white bg-opacity-70 p-6 rounded-lg z-10'>
         <h1 className='text-5xl leading-20 font-oswald font-bold ml-12 text-blue-950 animate-fadeInUp'>
           ACCOMPANY YOUR <br /> JOURNEY WITH COMFORT
         </h1>
@@ -45,7 +45,7 @@ function Hero() {
         <img src="/images/car 2 1.png" alt="Car Background" className='w-[50vw] ml-30 z-10' />
       </div>
 
-
+      
 
       {/* Footer Image */}
       <img 
@@ -57,4 +57,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Home;

@@ -29,18 +29,18 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li className="cursor-pointer p-3 hover:underline">
-          <Link to="/ride">Ride</Link>
-        </li>
-        <li className="cursor-pointer p-3 hover:underline">
           <Link to="/about">About Us</Link>
         </li>
         <li className="cursor-pointer p-3 hover:underline">
-          <Link to="/blog"> Blog</Link></li>
+          <Link to="/ride">Vehicle</Link>
+        </li>
+        <li className="cursor-pointer p-3 hover:underline">
+          <Link to="/blog"> Services</Link></li>
       </ul>
 
       {/* Book Button */}
       <Link to="/ride">
-        <div className="hidden xl:flex items-center bg-yellow-200 px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
+        <div className="hidden xl:flex items-center bg-blue-950 text-white px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
           <CarFront />
           <h1>Book</h1>
         </div>
@@ -61,16 +61,16 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li className="cursor-pointer" onClick={() => setMenuOpen(false)}>
-            <Link to="/ride">Ride</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li className="cursor-pointer" onClick={() => setMenuOpen(false)}>
-            <Link to="/about">About Us</Link>
+            <Link to="/ride">Vehicle</Link>
           </li>
           <li className="cursor-pointer" onClick={() => setMenuOpen(false)}>Safety</li>
         </ul>
 
         <Link to="/ride" onClick={() => setMenuOpen(false)}>
-          <div className="mt-10 flex items-center bg-yellow-200 px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
+          <div className="mt-10 flex items-center bg-blue-950 text-white px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
             <CarFront />
             <h1>Book</h1>
           </div>

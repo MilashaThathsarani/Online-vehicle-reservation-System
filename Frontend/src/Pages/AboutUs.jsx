@@ -1,58 +1,128 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import Banner from '/public/images/gurrrl.webp';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Car from '/public/images/Audi 1.png'; // Ensure the path is correct
 
-function Aboutus() {
-  const missionTextRef = useRef(null);
-  const missionDetailsRef = useRef(null);
-  const imageRef = useRef(null);
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+function AboutUs() {
+  const titleRef = useRef(null);
+  const carImageRef = useRef(null);
+  const textRef = useRef(null);
 
   useEffect(() => {
-    const timeline = gsap.timeline({ defaults: { duration: 1, ease: 'power3.out' } });
+    // Animation for the title
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
 
-    timeline
-      .fromTo(
-        missionTextRef.current,
-        { opacity: 0, x: -50 },
-        { opacity: 1, x: 0 }
-      )
-      .fromTo(
-        missionDetailsRef.current,
-        { opacity: 0, x: 50 },
-        { opacity: 1, x: 0 },
-        '-=0.5' // Overlap the animation slightly
-      )
-      .fromTo(
-        imageRef.current,
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1 },
-        '-=0.5'
-      );
+    // Animation for the car image
+    gsap.fromTo(
+      carImageRef.current,
+      { opacity: 0, scale: 0.8, rotate: -10 },
+      {
+        opacity: 1,
+        scale: 1,
+        rotate: 0,
+        duration: 1.5,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: carImageRef.current,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    // Animation for the text
+    gsap.fromTo(
+      textRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <div className="w-full flex flex-row justify-center items-center min-h-[25vw] mt-18 font-walsheim text-black">
-        <div
-          className="w-[30vw] text-4xl font-extralight"
-          ref={missionTextRef}
+    <div
+      className='min-h-screen flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden'
+      style={{
+        background: 'linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)', // Gradient background
+      }}
+    >
+      {/* Overlay for subtle texture */}
+      <div className='absolute inset-0 bg-noise opacity-10'></div>
+
+      <div className='relative z-10 max-w-7xl w-full'>
+        {/* Title */}
+        <h2
+          ref={titleRef}
+          className='text-4xl  font-bold text-center mt-2 py-4 text-white'
         >
-          <p>Our Mission: Driving Colombo Forward with Excellence</p>
-        </div>
-        <div className="w-[30vw]" ref={missionDetailsRef}>
-          To provide safe, reliable, and affordable transportation solutions across Colombo, ensuring exceptional customer satisfaction through modern technology, professional drivers, and a commitment to sustainability and community connectivity.
+          About Us
+        </h2>
+
+        {/* Content Container */}
+        <div className='bg-white/10 backdrop-blur-lg p-8 md:p-12 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-8'>
+          {/* Image Section */}
+          <div
+            ref={carImageRef}
+            className='w-full md:w-1/2 transform transition-transform duration-500 hover:scale-105'
+          >
+            <img
+              src={Car}
+              alt='Car'
+              className='w-full h-auto rounded-2xl shadow-2xl'
+            />
+          </div>
+
+          {/* Text Section */}
+          <div
+            ref={textRef}
+            className='w-full md:w-1/2 text-white space-y-6'
+          >
+            <p className='text-xl leading-relaxed'>
+              Welcome to <span className='font-bold text-yellow-400'>DriveEase</span>, where luxury meets convenience. We specialize in providing premium vehicle rentals that redefine your travel experience.
+            </p>
+            <p className='text-xl leading-relaxed'>
+              Our fleet includes the latest models from top brands, ensuring you drive in style and comfort. From sleek sedans to powerful SUVs, we’ve got the perfect ride for every occasion.
+            </p>
+            <p className='text-xl leading-relaxed'>
+              At DriveEase, we’re committed to delivering exceptional service, competitive pricing, and 24/7 support. Your journey begins with us.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="w-full min-h-[vw]">
-        <img
-          src={Banner}
-          alt=""
-          className="h-[22vw] object-cover w-full"
-          ref={imageRef}
-        />
-      </div>
+
+      {/* Decorative Elements */}
+      <div className='absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent z-5'></div>
     </div>
   );
 }
 
-export default Aboutus;
+export default AboutUs;

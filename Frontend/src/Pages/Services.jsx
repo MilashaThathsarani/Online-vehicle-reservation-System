@@ -19,7 +19,7 @@ const staggerContainer = {
   },
 };
 
-function Safety() {
+function Services() {
   // Map services to icons
   const services = [
     { name: 'Luxury Cars', icon: <FaCar className="w-12 h-12 mb-4 text-blue-900" /> },
@@ -45,7 +45,7 @@ function Safety() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className='text-2xl font-bold text-center mt-10'
+        className='text-3xl font-bold text-center mb-6'
       >
         Our Services
       </motion.h2>
@@ -65,7 +65,7 @@ function Safety() {
             className='bg-white p-4 rounded-lg shadow-md text-center border-1 border-blue-900 '
           >
             {/* Icon */}
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center">
               {service.icon}
             </div>
             <h3 className='text-xl font-semibold mb-2'>{service.name}</h3>
@@ -79,7 +79,7 @@ function Safety() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className='text-2xl font-bold text-center mt-12 mb-6'
+        className='text-3xl font-bold text-center mt-12 mb-6'
       >
         Why Choose Us?
       </motion.h2>
@@ -111,4 +111,4 @@ function Safety() {
   );
 }
 
-export default Safety;
+export default Services;
