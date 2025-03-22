@@ -24,9 +24,6 @@ public class CustomerService {
         Optional<Customer> customer = customerRepository.findById(id);
         return customer.orElse(null); // Return null if customer is not found
     }
-
-
-
   
     // Create a new customer
     public Customer createCustomer(Customer customer) {

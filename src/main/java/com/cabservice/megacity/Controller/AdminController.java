@@ -17,8 +17,6 @@ public class AdminController {
     
     @Autowired
     private PasswordEncoder passwordEncoder;
-    
-    
 
     @PostMapping("/auth/admincreate")
     @ResponseStatus(HttpStatus.CREATED)

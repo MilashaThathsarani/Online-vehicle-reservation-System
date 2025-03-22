@@ -105,12 +105,12 @@ function Register() {
       <div className="flex w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Left Side - Form */}
         <div className="w-1/2 p-8">
-          <h2 className="text-3xl font-bold text-blue-600 text-center mb-6">Register</h2>
+          <h2 className="text-3xl font-bold text-black text-center mb-6">Register</h2>
           <form onSubmit={handleSubmit}>
             {/* Step 1: Basic Details */}
             {currentStep === 1 && (
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-blue-500">Step 1: Basic Details</h3>
+                <h3 className="text-lg font-semibold mb-4 text-blue-900">Step 1: Basic Details</h3>
                 <div className="mb-4">
                   <label className="block text-sm font-medium mb-1">Username</label>
                   <input
@@ -183,7 +183,7 @@ function Register() {
             {/* Step 2: NIC Details */}
             {currentStep === 2 && (
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-blue-500">Step 2: NIC Details</h3>
+                <h3 className="text-lg font-semibold mb-4 text-blue-900">Step 2: NIC Details</h3>
                 <div className="mb-4">
                   <label className="block text-sm font-medium mb-1">NIC No</label>
                   <input
@@ -223,7 +223,7 @@ function Register() {
             {/* Step 3: Profile Picture */}
             {currentStep === 3 && (
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-blue-500">Step 3: Profile Picture</h3>
+                <h3 className="text-lg font-semibold mb-4 text-blue-900">Step 3: Profile Picture</h3>
                 <div className="mb-4">
                   <label className="block text-sm font-medium mb-1">Upload Profile Picture</label>
                   <input
@@ -253,7 +253,7 @@ function Register() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+                  className="bg-blue-950 text-white py-2 px-4 rounded-md hover:bg-blue-900"
                 >
                   Next
                 </button>
@@ -261,7 +261,7 @@ function Register() {
               {currentStep === 3 && (
                 <button
                   type="submit"
-                  className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
+                  className="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-600"
                 >
                   Register
                 </button>

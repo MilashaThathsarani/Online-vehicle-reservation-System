@@ -107,7 +107,7 @@ function AboutUs() {
             className='w-full md:w-1/2 text-white space-y-6'
           >
             <p className='text-xl leading-relaxed'>
-              Welcome to <span className='font-bold text-yellow-400'>DriveEase</span>, where luxury meets convenience. We specialize in providing premium vehicle rentals that redefine your travel experience.
+              Welcome to <span className='font-bold text-yellow-400'>Mega City</span>, where luxury meets convenience. We specialize in providing premium vehicle rentals that redefine your travel experience.
             </p>
             <p className='text-xl leading-relaxed'>
               Our fleet includes the latest models from top brands, ensuring you drive in style and comfort. From sleek sedans to powerful SUVs, we’ve got the perfect ride for every occasion.

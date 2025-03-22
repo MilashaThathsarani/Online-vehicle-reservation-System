@@ -36,15 +36,14 @@ function AboutPage2() {
         </div>
         <div className="max-w-2xl text-xl">
           <p>
-            At the heart of everything we do lies a passion for innovation. We believe in pushing boundaries,
-            challenging the status quo, and creating solutions that inspire. From cutting-edge technology to
-            sustainable practices, we're building a future that works for everyone.
+          Our mission is to simplify transportation by offering a convenient, safe, and affordable booking experience. 
+          We aim to bridge the gap between customers and drivers, ensuring a smooth and hassle-free journey for everyone..
           </p>
         </div>
       </div>
       <img
         src="https://images.unsplash.com/photo-1542372483-c18275e83e45?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Futuristic tech-themed image
-        alt="Innovating the Future"
+        alt="Our Mission"
         className="absolute inset-0 object-cover w-full h-full z-0"
         onError={(e) => {
           e.target.style.display = 'none'; // Hide the image if it fails to load

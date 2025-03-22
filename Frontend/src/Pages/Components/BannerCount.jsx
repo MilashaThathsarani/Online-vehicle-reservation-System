@@ -36,9 +36,9 @@ const BannerCount = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
           <div key={stat.id} className="bg-white p-6 rounded-2xl shadow-md flex items-center space-x-4">
-            <div className="bg-yellow-400 p-4 rounded-lg text-black">{stat.icon}</div>
+            <div className="bg-blue-300 p-4 rounded-lg text-white">{stat.icon}</div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900" ref={(el) => (countersRef.current[index] = el)}>
+              <h3 className="text-2xl font-bold text-slate-400" ref={(el) => (countersRef.current[index] = el)}>
                 0
               </h3>
               <p className="text-gray-600">{stat.label}</p>

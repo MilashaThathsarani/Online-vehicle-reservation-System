@@ -33,7 +33,6 @@ public class DriverController {
     private EmailService emailService;
 
 
-
     /**
      * Creates a new driver (Pending status by default)
      */
@@ -103,7 +102,6 @@ public class DriverController {
         service.createDriver(driver);
         return ResponseEntity.ok("Driver account created successfully.");
     }
-
 
     /**
      * Approves a driver (Admin action)
@@ -227,7 +225,6 @@ public ResponseEntity<Driver> getDriverById(@PathVariable String driverID) {
     Driver driver = service.getDriverByID(driverID);
     return driver != null ? ResponseEntity.ok(driver) : ResponseEntity.notFound().build();
 }
-
 
       // DriverController.java
 

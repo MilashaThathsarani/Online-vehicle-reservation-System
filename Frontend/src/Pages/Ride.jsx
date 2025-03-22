@@ -115,7 +115,7 @@ function Ride() {
 
         <button 
           onClick={resetFilters}
-          className="px-4 py-2 bg-blue-900 rounded-md shadow-md hover:bg-blue-800 transition text-white"
+          className="px-4 py-2 bg-blue-950 rounded-md shadow-md hover:bg-blue-900 transition text-white"
         >
           Reset Filters
         </button>
@@ -160,7 +160,7 @@ function Ride() {
                     disabled={!vehicle.isAvailable}
                     className={`mt-2 px-4 py-2 rounded-lg font-semibold transition-all ${
                       vehicle.isAvailable 
-                        ? 'bg-yellow-400 text-black hover:bg-yellow-500' 
+                        ? 'bg-blue-950 text-white hover:bg-blue-950' 
                         : 'bg-gray-400 text-gray-700 cursor-not-allowed'
                     }`}
                     title={!vehicle.isAvailable ? "This vehicle is currently unavailable" : ""}

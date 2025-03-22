@@ -67,7 +67,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center font-walsheim justify-center bg-gradient-to-r from-blue-500 to-purple-600">
+    <div className="min-h-screen flex items-center font-walsheim justify-center bg-blue-950">
       <div className="max-w-md w-full bg-white shadow-2xl rounded-lg p-8 transform transition-all">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
           Welcome Back!
@@ -155,7 +155,7 @@ const LoginPage = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300"
+              className="w-full bg-blue-950 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300"
             >
               Login
             </button>

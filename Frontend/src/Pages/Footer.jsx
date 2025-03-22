@@ -10,9 +10,9 @@ function Footer() {
           {/* Contact Information */}
           <div className='mb-6'>
             <h3 className='text-xl font-semibold mb-4'>Contact Us</h3>
-            <p className='mt-2'>Email: support@carrental.com</p>
-            <p>Phone: +1 234 567 890</p>
-            <p>Address: 123 Car Rental Street, City, Country</p>
+            <p className='mt-2'>Email: megacity@carrental.com</p>
+            <p>Phone: 011 9050886</p>
+            <p>Address: No.123 Royal Street, Colombo, Sri Lanka</p>
           </div>
 
           {/* Quick Links */}
@@ -20,9 +20,8 @@ function Footer() {
             <h3 className='text-xl font-semibold mb-4'>Quick Links</h3>
             <ul className='space-y-2'>
               <li><a href='/about' className='hover:text-blue-400 transition-colors'>About Us</a></li>
-              <li><a href='/services' className='hover:text-blue-400 transition-colors'>Services</a></li>
-              <li><a href='/faq' className='hover:text-blue-400 transition-colors'>FAQ</a></li>
-              <li><a href='/terms' className='hover:text-blue-400 transition-colors'>Terms & Conditions</a></li>
+              <li><a href='/ride' className='hover:text-blue-400 transition-colors'>Vehicle</a></li>
+              <li><a href='/driver-register' className='hover:text-blue-400 transition-colors'>Driver</a></li>
             </ul>
           </div>
 

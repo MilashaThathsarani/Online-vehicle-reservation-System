@@ -76,7 +76,7 @@ function Admins() {
 
       {/* Add Admin Button */}
       <button
-        className="fixed bottom-4 right-4 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-700"
+        className="fixed bottom-4 right-4 bg-blue-950 text-white p-4 rounded-full shadow-lg hover:bg-blue-700"
         onClick={() => setIsModalOpen(true)}
       >
         <Plus size={24} />
@@ -162,7 +162,7 @@ function Admins() {
               </button>
             </div>
             <button
-              className="bg-blue-600 text-white p-2 rounded w-full hover:bg-blue-700"
+              className="bg-blue-950 text-white p-2 rounded w-full hover:bg-blue-700"
               onClick={handleAddAdmin}
             >
               Add Admin

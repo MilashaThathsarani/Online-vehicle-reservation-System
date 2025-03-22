@@ -14,7 +14,7 @@ function Hero() {
     >
       {/* Content Section */}
       <div className='flex flex-col gap-12 bg-white bg-opacity-70 p-6 rounded-lg z-10'>
-        <h1 className='text-5xl leading-20 font-oswald font-bold ml-12 text-blue-950 animate-fadeInUp'>
+        <h1 className='text-5xl leading-20 leading-relaxed  font-oswald font-bold ml-12 text-blue-950 animate-fadeInUp'>
           ACCOMPANY YOUR <br /> JOURNEY WITH COMFORT
         </h1>
         {/* <h1 className='text-xl ml-12'>

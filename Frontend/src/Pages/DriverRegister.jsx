@@ -398,7 +398,7 @@ function DriverRegister() {
               type="submit"
               disabled={loading}
               className={`w-full px-4 py-2 rounded-lg text-white ${
-                loading ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
+                loading ? "bg-blue-400 cursor-not-allowed" : "bg-blue-950 hover:bg-blue-900"
               }`}
             >
               {loading ? "Submitting..." : "Submit Registration"}

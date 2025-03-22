@@ -23,7 +23,6 @@ import java.util.*;
 @Configuration
 public class JwtUtils {
 
-
     @Autowired
     private CustomerRepository customerRepository;
 
@@ -76,8 +75,6 @@ public class JwtUtils {
             .compact();
 }
 
-
-
     public boolean validateJwtToken(String token){
 
           try {
@@ -92,11 +89,7 @@ public class JwtUtils {
 
     }
 
-
-
     public String getUsernameFromJwtToken(String token){
-
-
         return Jwts.parserBuilder().setSigningKey(key()).build().parseClaimsJws(token).getBody().getSubject();
     }
 

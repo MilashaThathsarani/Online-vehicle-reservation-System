@@ -43,6 +43,6 @@ public class AuthController {
     String userId = jwtUtils.getUserIdFromJwtToken(jwtToken);
 
     return new LoginResponse(jwtToken, role, userId);
-}
+    }
 
 }

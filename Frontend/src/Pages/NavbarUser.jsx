@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Logo from '/public/images/Logo.svg';
+import Logo from '/public/images/logomilasha.svg';
 import { CarFront, Menu, X, User, Settings, LogOut } from 'lucide-react'; // Icons
 import { Link, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -58,18 +58,18 @@ function NavbarUser() {
   };
 
   return (
-    <div className="flex justify-between bg-white text-black items-center py-6 px-8 border-b-2 fixed top-0 left-0 w-full z-50">
+    <div className="flex justify-between bg-white text-black items-center py-2 px-8 border-b-2 fixed top-0 left-0 w-full z-50">
       {/* Logo */}
       <Link to="/">
-        <img src={Logo} alt="logo" className="w-[9rem]" />
+        <img src={Logo} alt="logo" className="w-[4rem]" />
       </Link>
 
       {/* Desktop Navigation */}
       <ul className="hidden xl:flex items-center gap-12 font-walsheim text-base">
         <li className="cursor-pointer p-3 hover:underline"><Link to="/">Home</Link></li>
-        <li className="cursor-pointer p-3 hover:underline"><Link to="/ride">Ride</Link></li>
         <li className="cursor-pointer p-3 hover:underline"><Link to="/about">About Us</Link></li>
-        <li className="cursor-pointer p-3 hover:underline"><Link to="/blog">Blog</Link></li>
+        <li className="cursor-pointer p-3 hover:underline"><Link to="/ride">Vehicle</Link></li>
+        <li className="cursor-pointer p-3 hover:underline"><Link to="/driver-register">Driver</Link></li>
       </ul>
 
       {/* Show User Profile if User is Logged In, Otherwise Show Login Button */}
@@ -128,7 +128,7 @@ function NavbarUser() {
         </div>
       ) : (
         <Link to="/login">
-          <div className="hidden xl:flex items-center bg-yellow-200 px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
+          <div className="hidden xl:flex items-center bg-blue-950 text-white px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
             <CarFront />
             <h1>Login</h1>
           </div>
@@ -156,7 +156,7 @@ function NavbarUser() {
         {user ? (
           <div className="mt-10 flex items-center gap-5">
             <div
-              className="w-12 h-12 flex items-center justify-center bg-yellow-200 text-black font-bold rounded-full text-xl cursor-pointer"
+              className="w-12 h-12 flex items-center justify-center bg-blue-950 text-black font-bold rounded-full text-xl cursor-pointer"
               onClick={handleProfileClick}
             >
               {user.username?.charAt(0).toUpperCase() ?? 'U'}
@@ -164,7 +164,7 @@ function NavbarUser() {
           </div>
         ) : (
           <Link to="/login" onClick={() => setMenuOpen(false)}>
-            <div className="mt-10 flex items-center bg-yellow-200 px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
+            <div className="mt-10 flex items-center bg-blue-950 px-3 py-2 gap-5 rounded-lg font-walsheim text-base cursor-pointer">
               <CarFront />
               <h1>Login</h1>
             </div>

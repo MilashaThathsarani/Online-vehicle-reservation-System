@@ -176,8 +176,6 @@ public class CustomerController {
         return (file != null && !file.isEmpty()) ? cloudinaryService.uploadImage(file) : null;
     }
 
-
-
      // Step 1: Generate OTP and send email
      @PostMapping("/forgot-password")
      public String forgotPassword(@RequestParam String email) {
@@ -222,7 +220,6 @@ public class CustomerController {
     }
     return "User not found!";
 }
-
 
 @GetMapping("/pricePerKm/{catModel}")
 public String getPricePerKm(@PathVariable String catModel) {

@@ -68,7 +68,6 @@ public class DriverService {
         return driverRepository.findByDriverStatues(status);
     }
     
-
     // Update a Driver
     public Driver updateDriver(String driverID, Driver updatedDriver) {
         Driver driver = getDriverByID(driverID);
@@ -125,18 +124,15 @@ public class DriverService {
         return false;
     }
 
-
     // Get All Pending Drivers
 public List<Driver> getAllPendingDrivers() {
     return driverRepository.findByDriverStatues("Pending");
 }
 
-
 // Get Driver by ID
 public Driver getDriverByID(String driverID) {
     return driverRepository.findById(driverID).orElse(null);
 }
-
 
 // DriverService.java
 

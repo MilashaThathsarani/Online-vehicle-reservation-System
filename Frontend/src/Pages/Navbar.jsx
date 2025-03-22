@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Logo from '/public/images/Logo.svg';
+import Logo from '/public/images/logomilasha.svg';
 import { CarFront, Menu, X } from 'lucide-react'; // Hamburger and Close icons
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -17,10 +17,10 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
-    <div className="flex justify-between bg-white text-black items-center py-6 px-8 border-b-2 fixed top-0 left-0 w-full z-50">
+    <div className="flex justify-between bg-white text-black items-center py-2 px-8 border-b-2 fixed top-0 left-0 w-full z-50">
       {/* Logo */}
       <a href="#Home">
-        <img src={Logo} alt="logo" className="w-[9rem]" />
+        <img src={Logo} alt="logo" className="w-[4rem]" />
       </a>
 
       {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ function Navbar() {
           <Link to="/ride">Vehicle</Link>
         </li>
         <li className="cursor-pointer p-3 hover:underline">
-          <Link to="/blog"> Services</Link></li>
+          <Link to="/driver-register">Driver</Link></li>
       </ul>
 
       {/* Book Button */}
@@ -66,7 +66,7 @@ function Navbar() {
           <li className="cursor-pointer" onClick={() => setMenuOpen(false)}>
             <Link to="/ride">Vehicle</Link>
           </li>
-          <li className="cursor-pointer" onClick={() => setMenuOpen(false)}>Safety</li>
+          <li className="cursor-pointer" onClick={() => setMenuOpen(false)}>Driver</li>
         </ul>
 
         <Link to="/ride" onClick={() => setMenuOpen(false)}>
